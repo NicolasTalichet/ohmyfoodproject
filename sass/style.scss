@@ -1,0 +1,296 @@
+@import "../sass/layout/base.scss";
+@import "../sass/layout/fonctionnement.scss";
+@import "../sass/layout/footer.scss";
+@import "../sass/layout/header.scss";
+@import "../sass/layout/info.scss";
+@import "../sass/layout/menu.scss";
+@import "../sass/layout/restaurants.scss";
+
+
+
+
+
+
+
+
+
+
+
+/*version tablette*/
+@media (min-width: 768px) {
+    .fonctionnnement {
+        padding: 50px 50px;
+        background-color: white;
+    }
+
+    .fonctionnnement__title {
+        padding-left: 0px;
+    }
+
+    .fonctionnnement__list {
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        padding: 0;
+
+        .ellipse1 {
+            @include number();
+            left: 0;
+        }
+    }
+
+    .fonctionnnement__text {
+        position: relative; // Nécessaire pour positionner absolument l'ellipse à l'intérieur
+
+        .ellipse2 {
+            @include number(); // Mixin de style pour l'ellipse
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(-50%, -50%); // Centrage de l'ellipse
+        }
+
+        .ellipse3 {
+            @include number(); // Mixin de style pour l'ellipse
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(-50%, -50%); // Centrage de l'ellipse
+        }
+    }
+
+    .restaurants {
+        padding: 0px 60px;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: space-around;
+        gap: 28px;
+    }
+
+    .restaurants__text {
+        padding: 12px;
+    }
+
+    .cards {
+        border: 2px solid ghostwhite;
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        align-items: flex-start;
+        gap: 60px;
+    }
+
+    a>img {
+        position: absolute;
+        top: 89.3%;
+        right: 55%;
+    }
+
+    a>.nouveau {
+        position: absolute;
+        top: 89.3%;
+        right: 8.5%;
+    }
+
+    .heart {
+        .icon1 {
+            position: absolute;
+            right: 55%;
+            top: 109.5%;
+        }
+
+        .fas1 {
+            position: absolute;
+            right: 54.7%;
+            top: 108%;
+        }
+
+        .icon2 {
+            position: absolute;
+            right: 8.4%;
+            top: 110%;
+        }
+
+        .fas2 {
+            position: absolute;
+            top: 108.4%;
+            right: 8%;
+        }
+
+        .icon3 {
+            position: absolute;
+            right: 55.4%;
+            top: 142.6%;
+        }
+
+        .fas3 {
+            position: absolute;
+            top: 141%;
+            right: 55%;
+        }
+
+        .icon4 {
+            position: absolute;
+            right: 8.4%;
+            top: 142.2%;
+        }
+
+        .fas4 {
+            position: absolute;
+            top: 140.6%;
+            right: 8%;
+        }
+
+        .fas {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition-property: all;
+            transition-duration: 600ms;
+            height: 30px;
+            width: 30px;
+            @include heart;
+
+            &:hover {
+                opacity: 1;
+                transform: scaleX(1.1);
+            }
+
+            &:active {
+                opacity: 1;
+                transform: scale(2);
+                padding: 0;
+            }
+        }
+    }
+
+    .menu {
+        padding: 40px 60px 0px 60px;
+        height: 1300px;
+    }
+
+    .menu__title {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        gap: 30px;
+        width: 400px;
+        margin-left: 50px;
+
+        .icon {
+            position: inherit;
+        }
+
+        .fas {
+            position: relative;
+            right: 59.2px;
+            top: 2.4px;
+
+            &:active {
+                opacity: 1;
+                transform: scale(2);
+            }
+        }
+    }
+
+    .espacement {
+        padding: 0px 50px 0px 50px;
+        background-color: white;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        justify-content: flex-start;
+        height: 114px;
+        padding: 30px 7px;
+        gap: 46px;
+    }
+
+    .lien {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+}
+
+/*version desktop*/
+@media (min-width: 1024px) {
+    .info {
+        .info__title {
+            font-size: 40px;
+        }
+    }
+
+    .fonctionnnement {
+        padding: 50px 180px;
+    }
+
+    .restaurants {
+        padding: 0px 180px;
+    }
+
+    a>img {
+        position: absolute;
+        top: 89.3%;
+        right: 53.5%;
+    }
+
+    a>.nouveau {
+        position: absolute;
+        top: 89.3%;
+        right: 195px;
+    }
+
+    .heart {
+        .icon1 {
+            right: 16px;
+            margin-right: 53%;
+        }
+
+        .fas1 {
+            right: 12.6px;
+            margin-right: 53%;
+        }
+
+        .icon2 {
+            right: 210px;
+        }
+
+        .fas2 {
+            right: 207px;
+        }
+
+        .icon3 {
+            right: 16px;
+            margin-right: 53%;
+        }
+
+        .fas3 {
+            right: 12.6px;
+            margin-right: 53%;
+        }
+
+        .icon4 {
+            right: 210px;
+        }
+
+        .fas4 {
+            right: 207px;
+        }
+    }
+
+    .menu {
+        padding: 40px 100px 0px 100px;
+    }
+
+    .espacement {
+        padding: 0px 200px 0px 200px;
+    }
+
+    footer {
+        padding: 30px 25px;
+    }
+}
