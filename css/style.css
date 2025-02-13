@@ -1,3 +1,37 @@
+@keyframes loader {
+  0% {
+    opacity: 2;
+    inset: 0;
+  }
+  50% {
+    opacity: 1;
+    inset: 0;
+  }
+  80% {
+    opacity: 0;
+    inset: 0;
+  }
+  100% {
+    opacity: 0;
+    inset: 100%;
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes entries {
+  0% {
+    transform: scaleX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+@keyframes click {}
 body {
   background-color: #F6F6F6;
   font-family: "roboto";
@@ -157,6 +191,59 @@ footer {
 }
 .lien p {
   margin: 0;
+}
+
+@keyframes loader {
+  0% {
+    opacity: 2;
+    inset: 0;
+  }
+  50% {
+    opacity: 1;
+    inset: 0;
+  }
+  80% {
+    opacity: 0;
+    inset: 0;
+  }
+  100% {
+    opacity: 0;
+    inset: 100%;
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes entries {
+  0% {
+    transform: scaleX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+@keyframes click {}
+.loader {
+  position: fixed;
+  top: 4%;
+  right: 3%;
+  animation: loader 2.5s forwards;
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  z-index: 1;
+  padding: 30px;
+  align-content: space-between;
+  justify-content: end;
+}
+.loader i {
+  animation: spin 1s 2;
+  color: #8D53D3;
 }
 
 .header_arrows {
